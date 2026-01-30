@@ -43,7 +43,7 @@ if not os.path.exists("new_faiss_index"):
         zip_ref.extractall()
 
 
-st.set_page_config(page_title="NeuroMine — Mining Q&A", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="MineVidya — Mining Q&A", layout="wide", initial_sidebar_state="expanded")
 
 load_dotenv()
 
@@ -58,7 +58,7 @@ llm=ChatGroq(model='llama-3.1-8b-instant')
 # prompt
 prompt=ChatPromptTemplate.from_template(
     """
-    You are NeuroMine — an expert friendly AI assistant trained on Indian mining regulations, DGMS circulars, safety guidelines, and historical accident data. Your purpose is to assist mine engineers, safety officers, and regulatory managers in making safe, legal, and informed operational decisions.
+    You are MineVidya — an expert friendly AI assistant trained on Indian mining regulations, DGMS circulars, safety guidelines, and historical accident data. Your purpose is to assist mine engineers, safety officers, and regulatory managers in making safe, legal, and informed operational decisions.
 
  Role 1: Mining Safety Advisor  
 When asked about safety, hazard response, or prevention:
@@ -105,7 +105,6 @@ For general regulatory or operational questions:
     management and includes organisational structure, planning, activities, responsibilities, practices, 
     procedures, processes and resources for developing, implementing, achieving, reviewing and maintaining a 
     safety and health policy of a company. 
-    ¹Hkkx IIμ[k.M 3(i)º Hkkjr dk jkti=k % vlk/kj.k 217 
     (4)  It  shall  be  the  duty  of  the  owner,  agent  and  manager  to  implement  the  measures  determined 
     necessary  and  contained  in  the  Safety  Management  Plan  for  achieving  the  objectives  set  out  in  sub-
     regulation (2) in the order in which the measures are listed in the said sub-regulation. 
@@ -210,8 +209,6 @@ agent_executor=AgentExecutor.from_agent_and_tools(
 
 def create_vector_embedding():
     if 'retriever' not in st.session_state:
-        # st.write("🔍 Checking if FAISS folder exists:", os.path.exists("new_faiss_index"))
-        # st.write("🔍 Checking if Mining_Documents.pkl exists:", os.path.exists("Mining_Documents.pkl"))
          
         with st.spinner("Loading existing vector database..."):
          
@@ -292,14 +289,14 @@ def list_materials():
 # Sidebar
 with st.sidebar:
      
-    st.header('NeuroMine')
+    st.header('MineVidya')
     st.markdown('**AI assistant for Indian mining regulations & safety**')
     page = st.radio('Navigation', ['Home', 'Chat Assistant', 'Materials', 'Settings'])
     st.markdown('---')
     st.caption('Built for mine engineers, safety officers, managers and exam aspirants.')
 
 # Page header
-st.markdown('<div class="title">NeuroMine — Mining Q&A Assistant</div>', unsafe_allow_html=True)
+st.markdown('<div class="title">MineVidya — Mining Q&A Assistant</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle">Ask about DGMS circulars, CMR/OMR regulation, historical accident learnings and safety best-practices.</div>', unsafe_allow_html=True)
 st.markdown('---')
 
@@ -312,7 +309,7 @@ if page == 'Home':
     st.subheader('What this chatbot does')
     st.markdown(
         """
-        - **NeuroMine** is a retrieval-augmented chatbot built to answer mining-specific questions using a curated collection of Indian mining Acts, DGMS circulars, accident reports, and safety alerts.
+        - **MineVidya** is a retrieval-augmented chatbot built to answer mining-specific questions using a curated collection of Indian mining Acts, DGMS circulars, accident reports, and safety alerts.
         - It prefers evidence from all mining documents and only uses web search when the internal documents are insufficient.
         - Use it for regulatory lookups, accident analysis, preventive measures, training scenarios and exam preparation.
         """
@@ -366,7 +363,7 @@ elif page == 'Materials':
 
 # CHAT ASSISTANT
 elif page == 'Chat Assistant':
-    st.subheader('Ask NeuroMine')
+    st.subheader('Ask MineVidya')
 
     # chat area
     chat_container = st.container()
@@ -407,7 +404,8 @@ elif page == 'Settings':
 
 # Footer
 st.markdown('---')
-st.caption('NeuroMine | RAG-powered mining assistant — built for internal use.')
+st.caption('MineVidya | RAG-powered mining assistant — built for internal use.')
+
 
 
 

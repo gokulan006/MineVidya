@@ -16,7 +16,7 @@ Unlike generic chatbots, MineVidya is built to assist **mine engineers, safety o
 
 ---
 
-## ✨ Features
+##  Features
 
 *  AI-powered Mining Assistant
 *  Hybrid Search (Semantic + BM25 Keyword Retrieval)
@@ -144,7 +144,7 @@ MineVidya first searches its internal mining knowledge base. If sufficient infor
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```bash
 MineVidya/
@@ -158,7 +158,7 @@ MineVidya/
 
 ---
 
-## 🖥️ Installation
+##  Installation
 
 ### Clone Repository
 
@@ -200,7 +200,7 @@ streamlit run app.py
 
 ---
 
-## 🎯 Applications
+##  Applications
 
 * Mining Industry
 * Mine Safety Management
@@ -238,5 +238,5 @@ This project is licensed under the MIT License.
 ---
 
 <p align="center">
-Built with ❤️ to make mining knowledge more accessible, safer, and intelligent through AI.
+Built to make mining knowledge more accessible, safer, and intelligent through AI and to develope AI cross all the fields.
 </p>

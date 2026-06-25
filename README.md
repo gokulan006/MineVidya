@@ -16,6 +16,18 @@ Unlike generic chatbots, MineVidya is built to assist **mine engineers, safety o
 
 ---
 
+## Why MineVidya?
+
+The Indian mining industry is governed by a large collection of domain-specific documents, including the **Mines Act**, **Coal Mines Regulations (CMR 2017)**, **DGMS Circulars**, **DGMS Technical Circulars**, **Gazette Notifications**, **Mineral Conservation and Development Rules (MCDR)**, and various safety manuals. These documents are extensive, frequently updated, and scattered across multiple official sources.
+
+While modern Large Language Models (LLMs) such as ChatGPT and Gemini are powerful general-purpose assistants, they are not designed to reliably retrieve and reason over a comprehensive, curated collection of Indian mining regulations and technical documents. As a result, mining professionals and students often need to manually search through hundreds of pages to find relevant rules, safety guidelines, and compliance requirements.
+
+**MineVidya** was developed to bridge this gap by providing a domain-specific AI assistant built exclusively for the Indian mining ecosystem. Using Retrieval-Augmented Generation (RAG), the system grounds every response in a curated knowledge base of mining regulations, DGMS circulars, technical manuals, and official reference documents, enabling users to quickly access accurate, context-aware information while reducing the time spent searching through lengthy documents.
+
+Our goal is to make mining knowledge more accessible, improve regulatory awareness, and provide a reliable AI-powered assistant for students, engineers, mine managers, researchers, and industry professionals.
+
+---
+
 ##  Features
 
 *  AI-powered Mining Assistant
